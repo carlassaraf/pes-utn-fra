@@ -3,6 +3,15 @@ from ulab import numpy as np
 
 class Tuner():
 
+    NOTES = {
+        "e": 329.63,
+        "B": 246.94,
+        "G": 196.00,
+        "D": 146.83,
+        "A": 110.00,
+        "E": 82.41
+    }
+
     def __init__(self, fs=1000, n=512, adc_pin=28):
         # Inicializo propiedades de la clase
         self._fs = fs
@@ -49,3 +58,10 @@ class Tuner():
         max_index = fft_real.index(max_amp)
         # Devuelvo el valor
         return self._freqs[max_index]
+    
+    def find_closest_note(self, fundamental):
+
+        # Encuentra la nota cuya frecuencia es la más cercana a la medida
+        closest_note = min(Tuner.NOTES, key=lambda note: abs(Tuner.NOTES[note] - fundamental))
+        
+        return closest_note

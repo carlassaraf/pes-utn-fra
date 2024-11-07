@@ -1,9 +1,12 @@
+from interfaceDisplay import InterfaceDisplay
 from tuner import Tuner
 from time import sleep
 
 tuner = Tuner(n=1024)
+display = InterfaceDisplay()
 
 tuner.sampling_start()
+display.draw_tuner_skeleton()
 
 while True:
 
@@ -18,6 +21,7 @@ while True:
         print(tuner.find_closest_note(note))
         print("Con frecuencia ", end="")
         print(Tuner.NOTES[tuner.find_closest_note(note)])
+        display.render_tuning_indicator(note)
         print()
         print()
         sleep(.25)

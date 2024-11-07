@@ -21,7 +21,9 @@ while True:
         print(tuner.find_closest_note(note))
         print("Con frecuencia ", end="")
         print(Tuner.NOTES[tuner.find_closest_note(note)])
-        display.render_tuning_indicator(note)
+        diffFrec = Tuner.NOTES[tuner.find_closest_note(note)] - note
+
+        display.render_tuning_indicator(diffFrec, "")
         print()
         print()
         sleep(.25)

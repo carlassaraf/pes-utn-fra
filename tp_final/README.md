@@ -3,20 +3,20 @@
 > Desarrollado por [Carlassara Fabrizio](https://github.com/carlassaraf) y [Conde Agustín](https://github.com/aguscondeBBVA).
 
 1. [Introducción](#1-introducción)
-2. [Etapa 1](#2-etapa-1)
-    2.1 [Introducción](#21-introducción)
-    2.2 [Desarrollo de etapa 1](#22-desarrollo-de-etapa-1)
-    2.3 [Contenidos teóricos](#23-contenidos-teóricos)
-    2.4 [Mejoras para aplicar en la etapa 2](#24-mejoras-para-aplicar-en-etapa-2)
-    2.5 [Versión de todas las dependencias utilizadas](#25-versión-de-todas-las-dependencias-utilizadas)
-    2.6 [Link a demo](#26-link-a-demo)
-3. [Etapa 2](#3-etapa-2)
-    3.1 [Introducción](#31-introducción)
-    3.2 [Desarrollo de etapa 2](#32-desarrollo-de-etapa-2)
-        3.2.1 [Guía de código](#321-guía-de-código)
-        3.2.2 [ADC](#322-adc)
-        3.2.3 [Timer](#323-timer)
-        3.2.4 [FFT](#324-fft)
+2. [Etapa 1](#2-etapa-1)<br>
+    2.1 [Introducción](#21-introducción)<br>
+    2.2 [Desarrollo de etapa 1](#22-desarrollo-de-etapa-1)<br>
+    2.3 [Contenidos teóricos](#23-contenidos-teóricos)<br>
+    2.4 [Mejoras para aplicar en la etapa 2](#24-mejoras-para-aplicar-en-etapa-2)<br>
+    2.5 [Versión de todas las dependencias utilizadas](#25-versión-de-todas-las-dependencias-utilizadas)<br>
+    2.6 [Link a demo](#26-link-a-demo)<br>
+3. [Etapa 2](#3-etapa-2)<br>
+    3.1 [Introducción](#31-introducción)<br>
+    3.2 [Desarrollo de etapa 2](#32-desarrollo-de-etapa-2)<br>
+        &ensp;3.2.1 [Guía de código](#321-guía-de-código)<br>
+        &ensp;3.2.2 [ADC](#322-adc)<br>
+        &ensp;3.2.3 [Timer](#323-timer)<br>
+        &ensp;3.2.4 [FFT](#324-fft)<br>
 
 ## 1. Introducción
 

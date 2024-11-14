@@ -61,7 +61,7 @@ Y para saber la cantidad de semitonos entre una nota podria guiarme de la siguie
 
 Sabiendo eso podemos transpolar a las notas que emite la guitarra sin ser presionadas y sabiendo que LA4 es $n = 49$, podemos empezar a contar hacia abajo los semitonos para obtener el valor de n y a su vez de la ecuación la frecuencia fundamental de cada cuerda:
 
-<center>
+<div align="center">
 
 | Cuerda | Nota | n | Frecuencia [Hz] |
 | --- | --- | --- | --- |
@@ -72,7 +72,7 @@ Sabiendo eso podemos transpolar a las notas que emite la guitarra sin ser presio
 | 2 | Si3 | 39 | 246,94 |
 | 1 | Mi4 | 44 | 329,63 |
 
-</center>
+</div>
 
 Ya con dichas frecuencias podemos generar un programa para detectar la cercanía a dichas frecuencias y a partir de allí indicar el grado de afinación de la guitarra.
 
@@ -116,13 +116,21 @@ Esta etapa constaría de tres bloques sencillos:
 * El microcontrolador RP2040, que va a usarse en el formato que viene en la placa de desarrollo RP2040-Zero que es pequeña y minimalista.
 * Una pantalla OLED de 0,96” por I2C para tener una pequeña interfaz gráfica.
 
-![diagrama_en_bloques](images/etapa2_bloques.png)
+<br>
+<div align="center">
+    <img src="images/etapa2_bloques.png" alt="diagrama_en_bloques" width="500px"/>
+</div>
+<br>
 
 #### 3.2.1 Guía de código
 
 En la siguiente figura se puede ver una pequeña guía de cómo fue implementada la resolución de esta etapa.
 
-![guia_de_codigo](images/etapa2_codigo.png)
+<br>
+<div align="center">
+    <img src="images/etapa2_codigo.png" alt="guia_de_codigo" height="800px"/>
+</div>
+<br>
 
 A diferencia de la etapa anterior, ahora se está trabajando con datos reales, por lo tanto, es crítico hacer conversiones del ADC de forma periódica para poder asegurar la frecuencia de muestreo.
 

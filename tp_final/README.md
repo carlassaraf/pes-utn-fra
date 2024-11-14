@@ -152,3 +152,15 @@ Aún así, debido a que en este caso en concreto de trabajo las frecuencias típ
 #### 3.2.4 FFT
 
 Los algoritmos de FFT normalmente no vienen implementados en el firmware de Micropython de cualquiera de los que están disponibles. Debido a eso, fue necesario compilar un firmware propio incluyendo el paquete de ulab que, entre otras cosas, incluye el paquete de numpy que funciona bastante parecido al numpy de Python para computadoras. Con ese paquete, es posible hacer el trabajo de transformada de Fourier con métodos prácticamente iguales a las usadas en la etapa 1.
+
+El paquete de Micropython mencionado junto con las instrucciones para compilar el firmware para el RP2040 se detallan en este [repositorio](https://github.com/v923z/micropython-ulab).
+
+## 4. Conclusiones
+
+Para la implementación en la etapa 2 en el RP2040 se pudo ver que, a pesar de no tener una unidad de punto flotante en su arquitectura, el error alcanzado fue muy mínimo (menor a un Hz). Este hecho es debido a la posibilidad de tener una buena cantidad de muestras (1024) en relación a la frecuencia de muestreo (2 KHz).
+
+Con esto podemos ver que, si bien es ideal que para hacer procesamiento de señales podamos contar con hardware que posea FPU, las ventajas que ofrece pueden compensarse con un microcontrolador que tenga una memoria RAM suficiente para poder almacenar la cantidad de muestras necesarias para minimizar el error.
+
+Por otro lado, se evaluó el uso de las funciones de Goertzel pero resultó mucho más lento que el algoritmo de FFT por la ausencia de la FPU. 
+
+Adicionalmente resaltamos que de la etapa 1 a la etapa 2 hubo una cierta evolucion de código mas que nada orientando al hardware con el que contábamos (RP2040). Por ejemplo, en la etapa 1 se realizaban ventanas de FFT, mientras que en el microcontrolador (etapa 2), que posee menos recursos que los que podemos contar en Google Colab, dichos calculos de ventanas se evitaron y simplemente buscabamos el máximo y buscábamos dónde se encontraba.

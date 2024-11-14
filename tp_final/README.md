@@ -84,7 +84,6 @@ Se implementará la lógica de código en un microcontrolador RP2040, analizando
 
 Las dependencias usadas en Google Colab son:
 
-* google NA
 * librosa 0.10.2.post1
 * matplotlib 3.7.1
 * numpy 1.26.4
@@ -100,7 +99,7 @@ Las dependencias usadas en Google Colab son:
 ### 2.6 Link a demo
 
 * [Google Colab](https://colab.research.google.com/drive/1VPid9wHf0V199YetYvphKKMsmZwi2430?authuser=0#scrollTo=sRPn-5YaUFtj)
-* [Demo en GitHub]()
+* [Demo en GitHub](etapa_1/demo_etapa_1.ipynb)
 
 ## 3. Etapa 2
 

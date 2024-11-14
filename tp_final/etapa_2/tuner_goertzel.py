@@ -106,12 +106,9 @@ class Goertzel():
         return power
 
     # Detectar la frecuencia dominante en un rango cercano a la frecuencia objetivo
-    def detect_frequency(self, data, sample_rate, target_freq, freq_range=60):
+    def detect_frequency(self, data, sample_rate, target_freq, freq_range=40):
         max_power = 0
         detected_freq = target_freq
-        print("target_freq: ", end="")
-        print(target_freq)
-
 
         # Probar frecuencias en el rango [target_freq - freq_range, target_freq + freq_range]
         for f in np.arange(target_freq - freq_range, target_freq + freq_range, 0.1):

@@ -128,13 +128,10 @@ class Goertzel():
             Frecuencia fundamental en Hz
         """
         # Aplico Goertzel a todas las NOTAS
-        difs = [self.detect_frequency(self._samples, self._fs, freq) for freq in Goertzel.NOTES.values()]
-        print("difs: ", end="")
-        print(difs)
-        # Encuentro la nota mas cercana
-        notes_list = list(Goertzel.NOTES.keys())
-        closest_note = min(Goertzel.NOTES, key=lambda note: abs(Goertzel.NOTES[note] - difs[notes_list.index(note)]))
-        return difs[notes_list.index(closest_note)]
+        detectedFreqs = self.detect_frequency(self._samples, self._fs, 200, 160)
+        print("Frecuencia detectada: ", end="")
+        print(detectedFreqs)
+        return detectedFreqs
 
     
     def find_closest_note(self, fundamental):
